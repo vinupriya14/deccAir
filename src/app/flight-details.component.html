@@ -1,0 +1,79 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to SimplyFly</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 class="text-center" id="wel">Welcome to<span> </span></h1>
+<table mat-table class="table table-light table-striped" [dataSource]="flightDetailList">
+  <ng-container matColumnDef="flightNo">
+    <th mat-header-cell *matHeaderCellDef> Flight No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fuelCapacity">
+    <th mat-header-cell *matHeaderCellDef> Fuel capacity </th>
+    <td mat-cell *matCellDef="let element" style="padding-left: 50px;"> {{element.fuelCapacity}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="route">
+    <th mat-header-cell *matHeaderCellDef> Route </th>
+    <td mat-cell *matCellDef="let element"> {{element.routeFrom}} - {{element.routeTo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="origin">
+    <th mat-header-cell *matHeaderCellDef> Origin </th>
+    <td mat-cell *matCellDef="let element"> {{element.origin}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="destination">
+    <th mat-header-cell *matHeaderCellDef> Destination </th>
+    <td mat-cell *matCellDef="let element"> {{element.destination}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="time">
+    <th mat-header-cell *matHeaderCellDef> Time </th>
+    <td mat-cell *matCellDef="let element"> {{element.timeHours}} : {{element.timeMinutes}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="duration">
+    <th mat-header-cell *matHeaderCellDef> Duration </th>
+    <td mat-cell *matCellDef="let element" style="padding-left: 30px"> {{element.durationHours}} - {{element.durationMinutes}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="stopType">
+    <th mat-header-cell *matHeaderCellDef> Stop type </th>
+    <td mat-cell *matCellDef="let element"> {{element.stopType}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef> Edit </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="green" (click)="editFlightDetail(element)">
+        <mat-icon class="mat-18">system_update</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="red" (click)="deleteFlightDetail(element.no)">
+        <mat-icon class="mat-18">delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<br>
+<br>
+<button class="add-btn" (click)="addFlightDetails()"> Add flight details </button>
+</body>
+</html>

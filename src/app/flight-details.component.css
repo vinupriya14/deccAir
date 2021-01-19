@@ -1,0 +1,54 @@
+table {
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  opacity: 0.5;
+  /*background: transparent;*/
+}
+
+th.mat-header-cell {
+  text-align: left;
+  max-width: 300px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #CCCCCC;
+  background: rgba(0.25,0.75,0.25,0.7);
+}
+#wel{
+  font-style: italic;
+  font-weight: bold;
+  font-size:30px;
+  font-family: 'Fjalla One', sans-serif;
+  margin-top: 15px;
+}
+span::before {
+  content: "✈ SimplyFly ✈";
+  animation: animate infinite 3s;
+  padding-left: 10px;
+}
+
+@keyframes animate {
+
+  50% {
+    content: "Simply";
+  }
+
+  75% {
+    content: "Fly";
+  }
+}
+td{
+  color: black;
+  font-size: 18px;
+}
+.add-btn {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: black;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
