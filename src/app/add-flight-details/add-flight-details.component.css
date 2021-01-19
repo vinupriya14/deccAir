@@ -1,0 +1,86 @@
+body{
+  background-image: url('https://previews.123rf.com/images/studiostoks/studiostoks1710/studiostoks171000008/87383565-retro-airplane-flying-in-the-clouds-air-travel-background.jpg');
+  background-size: cover;
+}
+#btn{
+  background: #2F96B4;
+  margin-left: 700px;
+}
+#hH{
+  font-style: italic;
+  font-weight: bold;
+  font-size:30px;
+  font-family: Consolas;
+}
+#form{
+  background-color: #000;
+  height:450px;
+  width:700px;
+  padding:20px;
+  opacity: 0.7;
+}
+::placeholder{
+  color:#fff
+}
+#input #input-group{
+  width:300px;
+  margin:10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background: transparent;
+  color:#fff
+}
+#input2 #input-group{
+  width:615px;
+  margin:10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background: transparent;
+  color:#fff
+}
+input,label {
+  font: inherit;
+  width: 5ch;
+  color:royalblue
+
+}
+#input4 #input-group{
+  width:100px;
+  margin:10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background: transparent;
+  color:#fff
+}
+#input6 #input-group{
+  width:100px;
+  margin:10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background: transparent;
+  color:#fff
+}
+#input6 #input-group1{
+  width:100px;
+  margin:10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background: transparent;
+  color:#fff
+}
+#input6 #myTime{
+  width: 15ch;
+}
+#btn1{
+  margin-left: 280px;
+}

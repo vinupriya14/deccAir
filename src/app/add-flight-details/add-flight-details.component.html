@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add flight details</title>
+
+<!--   Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container"><!--container-->
+
+  <div class="form-group"><!--form-->
+    <button (click)="close()" id="btn"> X </button>
+    <h1 class="text-center" id="hH">Add flight details</h1>
+
+    <div id="form"><!--form-->
+      <h3 class="text-white">Flight Schema</h3>
+
+      <div id="input"><!--input-->
+        <input type="string" id="input-group" placeholder="Flight number" [(ngModel)]="flightDetails.no">
+        <input type="number" id="input-group" placeholder="Fuel Capacity" [(ngModel)]="flightDetails.fuelCapacity">
+        <select  id="input-group" style="background: black;" [(ngModel)]="flightDetails.routeFrom">
+          <option value="Bangalore">BLR</option>
+          <option value="Chennai">MAA</option>
+          <option value="Coimbatore">COK</option>
+          <option value="Cochin">CJB</option>
+          <option value="Mumbai">GOI</option>
+        </select>
+        <select  id="input-group" style="background: black;" [(ngModel)]="flightDetails.routeTo">
+          <option value="Chennai">MAA</option>
+          <option value="Bangalore">BLR</option>
+          <option value="Coimbatore">CDK</option>
+          <option value="Cochin">CJB</option>
+          <option value="Mumbai">GOI</option>
+        </select>
+      </div><!--input-->
+
+      <div id="input2"><!--input2-->
+        <input type="text" id="input-group" placeholder="Origin" [(ngModel)]="flightDetails.origin">
+      </div><!--input2-->
+      <div id="input2"><!--input2-->
+        <input type="text" id="input-group" placeholder="Destination" [(ngModel)]="flightDetails.destination">
+      </div><!--input2-->
+
+      <div id="input6"><!--input4-->
+        <input type="text" id="input-group" placeholder="Time">
+        <input id='h' name='h' type='number' min='0' max='24' [(ngModel)]="flightDetails.timeHours">
+        <label for='h'>h</label>
+        <input id='m' name='m' type='number' min='0' max='59' [(ngModel)]="flightDetails.timeMinutes">
+        <label for='m'>m</label>
+      </div><!--input4-->
+
+      <div id="input4"><!--input4-->
+        <input type="text" id="input-group" placeholder="Duration">
+        <input id='h' name='h' type='number' min='0' max='24' [(ngModel)]="flightDetails.durationHours">
+        <label for='h'>h</label>
+        <input id='m' name='m' type='number' min='0' max='59' [(ngModel)]="flightDetails.durationMinutes">
+        <label for='m'>m</label>
+        <input type="radio" id="input-group" name="r" [value]="'Non-stop'" [(ngModel)]="flightDetails.stopType">
+        <label class="text-white" for="input-group">Non-stop</label>
+        <input type="radio" id="input-group" name="r" [value]="'One-stop'" [(ngModel)]="flightDetails.stopType">
+        <label class="text-white" for="input-group">One stop</label>
+      </div><!--input4-->
+
+      <button type="submit" id="btn1" class="btn btn-warning text-white" (click)="updateFlightDetails()"> {{ type === 'add' ? 'Add' : 'Edit' }} </button>
+    </div><!--form-->
+
+  </div><!--form-->
+
+</div><!--container-->
+</body>
+</html>
